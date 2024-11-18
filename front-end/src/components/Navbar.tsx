@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import woman from "../../public/woman-desktop.jpg";
 import { IoIosArrowDown } from "react-icons/io";
+import woman from "../../public/woman-desktop.webp";
 import { CiSearch } from "react-icons/ci";
 
 const Navbar = () => {
