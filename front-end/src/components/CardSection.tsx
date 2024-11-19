@@ -15,7 +15,7 @@ const CardSection = () => {
     });
   }, []);
   return (
-    <div>
+    <section>
       <div className="mb-[15px] flex justify-center lg:mb-[35px] lg:text-3xl lg:font-semibold">
         بهترین روش رو برای خودت انتخاب کن
       </div>
@@ -23,7 +23,7 @@ const CardSection = () => {
         {cards.map((card, index) => {
           return (
             <div key={index} className="mt-[20px] flex justify-center">
-              <div className="mx-[40px] h-[420px] w-full rounded-md bg-[#F4F8F8] text-right lg:h-[470px]">
+              <div className="mx-[40px] h-[460px] w-full rounded-md bg-[#F4F8F8] text-right lg:h-[490px]">
                 <div className="flex justify-center">
                   <Image
                     src={card.image}
@@ -48,7 +48,7 @@ const CardSection = () => {
                     </div>
                     <div className="order-1 flex">{card.description}</div>
                   </div>
-                  <div className="mt-[20px] justify-end flex">
+                  <div className="mt-[13px] justify-end flex">
                     <div className="order-2 mt-[10px] flex">
                       <div className="mx-[10px] lg:mx-[5px] h-[5px] w-[5px] rounded-full bg-red-400"></div>
                     </div>
@@ -60,7 +60,7 @@ const CardSection = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 
