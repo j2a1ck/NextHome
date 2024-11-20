@@ -1,23 +1,25 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
-
-import { IoIosArrowDown } from "react-icons/io";
 import woman from "../../public/woman-desktop.webp";
 import { CiSearch } from "react-icons/ci";
+import DropDown from "./DropDown";
 
 const Navbar = () => {
   return (
-    <div>
+    <header>
       {/* mobile view */}
-      <div className="m-[17px] flex flex-row justify-between lg:hidden">
-        <Image
-          src={"user.svg"}
-          alt="user icon"
-          width={31}
-          height={31}
-        />
+      <nav className="m-[17px] flex flex-row justify-between lg:hidden">
+        <Image src={"user.svg"} alt="user icon" width={31} height={31} />
         <Link href={"/"}>
-          <Image src={"/airplane.png"} alt="airplane" width={55} height={55}  priority />
+          <Image
+            className="md:w-[80px]"
+            src={"/airplane.png"}
+            alt="airplane"
+            width={55}
+            height={55}
+            priority
+          />
         </Link>
         <Image
           src={"menu-burger.svg"}
@@ -25,7 +27,7 @@ const Navbar = () => {
           width={31}
           height={31}
         />
-      </div>
+      </nav>
 
       {/** desktop view */}
       <div
@@ -38,21 +40,23 @@ const Navbar = () => {
               <Image src={"user.svg"} alt="user icon" width={31} height={31} />
             </button>
             <div className="relative">
-              <span className="absolute left-3 top-5">
+              <span className="absolute left-3 top-1/3">
                 <CiSearch />
               </span>
               <input
                 placeholder="search"
-                className="h-[50px] w-[206px] rounded-xl bg-[#C7EDE6] pl-9"
+                className="h-[50px] w-[206px] rounded-xl bg-[#b5ecf4] pl-9 placeholder-gray-500"
               />
             </div>
           </div>
-          <div className="mr-[35px] flex space-x-4">
+          <nav className="mr-[35px] flex space-x-4">
             <div className="mr-[20px] flex space-x-5 font-semibold text-[#4C4C4C]">
               <button>درباره ما</button>
-              <button className="flex items-center">
-                <IoIosArrowDown /> خدمات
-              </button>
+              <div
+                className="flex cursor-pointer items-center"
+              >
+                <DropDown>خدمات</DropDown>
+              </div>
               <button>مهاجرت</button>
               <button>خانه</button>
             </div>
@@ -62,7 +66,7 @@ const Navbar = () => {
               width={100}
               height={100}
             />
-          </div>
+          </nav>
         </div>
         <p className="mr-[200px] mt-[100px] flex justify-end text-2xl font-bold">
           شما را هموار کنیم
@@ -70,7 +74,7 @@ const Navbar = () => {
           ما اینجا هستیم تا مسیر
         </p>
       </div>
-    </div>
+    </header>
   );
 };
 
