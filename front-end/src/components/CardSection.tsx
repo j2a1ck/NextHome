@@ -28,9 +28,9 @@ const CardSection = () => {
                   <Image
                     src={card.image}
                     alt="people are working in pic"
-                    width={100}
-                    height={100}
-                    className="mt-[10px] w-full lg:w-[400px]"
+                    width={400}
+                    height={400}
+                    className="mt-[10px] w-full rounded-lg bg-cover lg:w-[400px]"
                   />
                 </div>
                 <div className="mr-[10px]">
@@ -48,9 +48,9 @@ const CardSection = () => {
                     </div>
                     <div className="order-1 flex">{card.description}</div>
                   </div>
-                  <div className="mt-[13px] justify-end flex">
+                  <div className="mt-[13px] flex justify-end">
                     <div className="order-2 mt-[10px] flex">
-                      <div className="mx-[10px] lg:mx-[5px] h-[5px] w-[5px] rounded-full bg-red-400"></div>
+                      <div className="mx-[10px] h-[5px] w-[5px] rounded-full bg-red-400 lg:mx-[5px]"></div>
                     </div>
                     <div className="order-1 flex">{card.description2}</div>
                   </div>
