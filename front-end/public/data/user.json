@@ -1,0 +1,14 @@
+{
+  "user": [
+    {
+      "name": "jack",
+      "level": "admin",
+      "img": "/default.jpg"
+    },
+    {
+      "name": "jack",
+      "level": "admin",
+      "img": "/default.jpg"
+    }
+  ]
+}
