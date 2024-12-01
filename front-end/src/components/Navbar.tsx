@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import woman from "../../public/woman-desktop.webp";
+import woman from "../../public/images/woman-desktop.webp";
 import { CiSearch } from "react-icons/ci";
 import DropDown from "./DropDown";
 
@@ -10,11 +10,11 @@ const Navbar = () => {
     <header>
       {/* mobile view */}
       <nav className="m-[17px] flex flex-row justify-between lg:hidden">
-        <Image src={"user.svg"} alt="user icon" width={31} height={31} />
+        <Image src={"/images/user.svg"} alt="user icon" width={31} height={31} />
         <Link href={"/"}>
           <Image
             className="md:w-[80px]"
-            src={"/airplane.png"}
+            src={"/images/airplane.png"}
             alt="airplane"
             width={55}
             height={55}
@@ -22,7 +22,7 @@ const Navbar = () => {
           />
         </Link>
         <Image
-          src={"menu-burger.svg"}
+          src={"/images/menu-burger.svg"}
           alt="burger menu"
           width={31}
           height={31}
@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="hidden justify-between lg:flex">
           <div className="ml-[50px] flex flex-row items-center space-x-7">
             <button>
-              <Image src={"user.svg"} alt="user icon" width={31} height={31} />
+              <Image src={"/images/user.svg"} alt="user icon" width={31} height={31} />
             </button>
             <div className="relative">
               <span className="absolute left-3 top-1/3">
@@ -61,7 +61,7 @@ const Navbar = () => {
               <button>خانه</button>
             </div>
             <Image
-              src={"/airplane.png"}
+              src={"/images/airplane.png"}
               alt="airplane"
               width={100}
               height={100}

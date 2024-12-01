@@ -29,7 +29,7 @@ const Header = () => {
       </div>
       <div className="m-[90px] flex gap-[20px]">
         <Image
-          src={user?.img || "/default.jpg"}
+          src={user?.img || "/images/default.jpg"}
           alt="user pic"
           height={40}
           width={40}

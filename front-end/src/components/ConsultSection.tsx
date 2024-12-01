@@ -26,7 +26,7 @@ const ConsultSection = () => {
         </div>
         <div className="mx-auto lg:mx-[70px] mt-[15px] flex w-[300px] justify-center bg-center md:mt-[30px] md:w-[400px] lg:-order-last">
           <Image
-            src="/travel.webp"
+            src="/images/travel.webp"
             alt="3d of airplane"
             width={441}
             height={310}

@@ -1,4 +1,4 @@
-import road from "../../public/road.png";
+import road from "../../public/images/road.png";
 
 const HeroSection = () => {
   return (
