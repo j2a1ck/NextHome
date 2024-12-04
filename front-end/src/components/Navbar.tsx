@@ -2,9 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import woman from "../../public/images/woman-desktop.webp";
-import { CiSearch } from "react-icons/ci";
 import DropDown from "./DropDown";
-
+import SearchBar from "./SearchBar";
 const Navbar = () => {
   return (
     <header>
@@ -39,15 +38,7 @@ const Navbar = () => {
             <button>
               <Image src={"/images/user.svg"} alt="user icon" width={31} height={31} />
             </button>
-            <div className="relative">
-              <span className="absolute left-3 top-1/3">
-                <CiSearch />
-              </span>
-              <input
-                placeholder="search"
-                className="h-[50px] w-[206px] rounded-xl bg-[#b5ecf4] pl-9 placeholder-gray-500"
-              />
-            </div>
+            <SearchBar/>
           </div>
           <nav className="mr-[35px] flex space-x-4">
             <div className="mr-[20px] flex space-x-5 font-semibold text-[#4C4C4C]">
