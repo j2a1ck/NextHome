@@ -1,15 +1,18 @@
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
 import text from "../../public/data/text.json";
 
 const SearchBar = () => {
-    const items = text.cards;
+  const items = text.cards;
 
   const [searchTerm, setSearchTerm] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const resultsRef = useRef<HTMLDivElement>(null);
 
-// filter item
+  // filter item
   const filteredItems = () => {
     return items
       .filter((item) => item.type.toLocaleLowerCase().startsWith(searchTerm))
@@ -18,19 +21,24 @@ const SearchBar = () => {
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
   // Close the dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
-      }
-    };
+ useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    const path = event.composedPath();
+    if (
+      inputRef.current &&
+      resultsRef.current &&
+      !path.includes(inputRef.current) &&
+      !path.includes(resultsRef.current)
+    ) {
+      setIsOpen(false);
+    }
+  };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
 
   return (
     <div className="relative">
@@ -48,15 +56,17 @@ const SearchBar = () => {
         />
         {/* Dropdown */}
         {isOpen &&
-          filteredItems().map((item: { type: string }, index: number) => (
-            <a
-              key={index}
-              href="#"
-              className="block cursor-pointer rounded-2xl px-4 py-2 text-right text-gray-700 hover:bg-gray-100 active:bg-blue-100 bg-slate-200 mt-3"
-            >
-              {item.type}
-            </a>
-          ))}
+          filteredItems().map(
+            (item: { type: string; name: string }, index: number) => (
+              <Link
+                key={index}
+                href={`/post/${item.name}`}
+                className="mt-3 block cursor-pointer rounded-2xl bg-slate-200 px-4 py-2 text-right text-gray-700 hover:bg-gray-100 active:bg-blue-100"
+              >
+                {item.type}
+              </Link>
+            )
+          )}
       </div>
     </div>
   );
