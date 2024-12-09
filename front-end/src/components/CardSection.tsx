@@ -2,8 +2,10 @@
 import Image from "next/image";
 import CardButton from "./CardButton";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 interface Card {
+  name: string;
   image: string;
   type: string;
   buttons: string[];
@@ -26,6 +28,7 @@ const CardSection = () => {
       <div className="lg:grid lg:grid-cols-3 mb-[20px]">
         {cards.map((card: Card, index: number) => {
           return (
+            <Link href={`/post/${card.name}`} key={index}>
             <div key={index} className="mt-[20px] flex justify-center">
               <div className="mx-[40px] h-[460px] w-full rounded-md bg-[#F4F8F8] text-right lg:h-[490px]">
           <div className="flex justify-center">
@@ -61,6 +64,7 @@ const CardSection = () => {
           </div>
               </div>
             </div>
+              </Link>
           );
         })}
       </div>

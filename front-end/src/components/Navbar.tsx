@@ -1,32 +1,13 @@
 "use client"
 import Image from "next/image";
-import Link from "next/link";
 import woman from "../../public/images/woman-desktop.webp";
 import DropDown from "./DropDown";
 import SearchBar from "./SearchBar";
+import MobileNavbar from "./MobileNavbar";
 const Navbar = () => {
   return (
     <header>
-      {/* mobile view */}
-      <nav className="m-[17px] flex flex-row justify-between lg:hidden">
-        <Image src={"/images/user.svg"} alt="user icon" width={31} height={31} />
-        <Link href={"/"}>
-          <Image
-            className="md:w-[80px]"
-            src={"/images/airplane.png"}
-            alt="airplane"
-            width={55}
-            height={55}
-            priority
-          />
-        </Link>
-        <Image
-          src={"/images/menu-burger.svg"}
-          alt="burger menu"
-          width={31}
-          height={31}
-        />
-      </nav>
+      <MobileNavbar/>
 
       {/** desktop view */}
       <div

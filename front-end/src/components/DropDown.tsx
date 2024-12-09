@@ -1,4 +1,5 @@
 import { IoIosArrowDown } from "react-icons/io";
+import Link from "next/link";
 
 interface DropDownProp {
   children?: React.ReactNode;
@@ -31,31 +32,31 @@ const DropDown = ({ children }: DropDownProp) => {
             role="menuitem"
             className="hover:[#ffff] focus:[#ffff] active:[#ffff] block w-full cursor-pointer items-center rounded-md p-3 text-sm text-slate-800 transition-all"
           >
-            تحصیلی
+            <Link href={"/post/education"}>تحصیلی</Link>
           </li>
           <li
             role="menuitem"
             className="hover:[#ffff] focus:[#ffff] active:[#ffff] block w-full cursor-pointer items-center rounded-md p-3 text-sm text-slate-800 transition-all"
           >
-            کاری
+            <Link href={"/post/work"}>کاری</Link>
           </li>
           <li
             role="menuitem"
             className="hover:[#ffff] focus:[#ffff] active:[#ffff] block w-full cursor-pointer items-center rounded-md p-3 text-sm text-slate-800 transition-all"
           >
-            سرمایه گذاری
+            <Link href={"/post/invest"}> سرمایه گذاری</Link>
           </li>
           <li
             role="menuitem"
             className="hover:[#ffff] focus:[#ffff] active:[#ffff] block w-full cursor-pointer items-center rounded-md p-3 text-sm text-slate-800 transition-all"
           >
-            خانوادگی
-          </li>{" "}
+            <Link href={"/post/family"}>خانوادگی</Link>
+          </li>
           <li
             role="menuitem"
             className="hover:[#ffff] focus:[#ffff] active:[#ffff] block w-full cursor-pointer items-center rounded-md p-3 text-sm text-slate-800 transition-all"
           >
-            لاتاری
+            <Link href={"/post/lottery"}> لاتاری</Link>
           </li>
         </ul>
       </div>
