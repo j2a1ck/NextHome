@@ -6,11 +6,11 @@ import Navbar  from "@/components/Navbar";
 export default function Home() {
   return (
     <div>
-        <Navbar/>
-        <HeroSection/>
-        <ConsultSection/>
-        <CardSection/>
+      <Navbar />
       <main>
+        <HeroSection />
+        <ConsultSection />
+        <CardSection />
       </main>
     </div>
   );

@@ -32,19 +32,19 @@ export default async function Blog(props: Props) {
   return (
     <article className="container mx-auto px-4">
       <header>
-        <nav className="mt-3 hidden md:block">
+        <nav className="hidden lg:block">
           <DesktopNavbar />
         </nav>
-        <nav className="md:hidden">
+        <nav>
           <MobileNavbar />
         </nav>
       </header>
-      <main>
+      <main className="lg:mt-[70px]">
         <Image
-          className="mx-auto mb-5 rounded-lg"
+          className="mx-auto mb-5 rounded-lg lg:w-[600px]"
           src={currentCard.image}
-          width={300}
-          height={300}
+          width={400}
+          height={400}
           alt="Work related illustration"
           priority
         />
