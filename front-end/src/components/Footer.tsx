@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="mx-[180px] mt-10 flex h-[245px] justify-center text-right">
       <div className="">
         <div className="flex flex-col lg:flex-row">
-          <ul className="order-last my-10 mx-16 flex items-center flex-col gap-2 lg:order-first">
+          <ul className="order-last my-10 mx-10 flex items-center flex-col gap-2 lg:order-first">
             <li className="mb-3 text-lg font-semibold">با ما همراه باشید</li>
             <div className="flex flex-row justify-end space-x-3">
               <BiLogoInstagramAlt className="h-8 w-8" />

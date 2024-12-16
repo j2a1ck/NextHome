@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 
+
 const vazir = localFont({
   src: "./fonts/Vazirmatn.ttf",
   display: "swap",
@@ -9,7 +10,7 @@ const vazir = localFont({
 
 export const metadata: Metadata = {
   title: "Next Home",
-  description: "find way to run from this country",
+  description: "شریک مورد اعتماد شما برای خدمات مهاجرت و جابجایی.",
 };
 
 export default function RootLayout({

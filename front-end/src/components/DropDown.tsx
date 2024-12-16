@@ -26,7 +26,7 @@ const DropDown = ({ children }: DropDownProp) => {
             role="menuitem"
             className="hover:[#ffff] focus:[#ffff] active:[#ffff] block w-full cursor-pointer items-center rounded-md p-3 text-sm text-slate-800 transition-all"
           >
-            مشاوره
+            <Link href={"/#consult"}>مشاوره</Link>
           </li>
           <li
             role="menuitem"

@@ -35,7 +35,7 @@ const MobileNavbar = () => {
         />
       </button>
       {isOpen && (
-        <div className="absolute right-5 top-20 z-10 flex h-80 w-60 flex-col items-center justify-center rounded-lg bg-zinc-100">
+        <div className="absolute right-5 top-20 z-10 flex h-80 w-60 flex-col items-center justify-center rounded-lg bg-[#F4F8F8]">
           <button onClick={() => setIsOpen(!isOpen)}>
             <IoMdClose />
           </button>

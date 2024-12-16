@@ -30,14 +30,14 @@ const CardSection = () => {
           return (
             <Link href={`/post/${card.name}`} key={index}>
               <article key={index} className="mt-[20px] flex justify-center">
-                <div className="mx-[40px] h-[460px] md:flex lg:block rounded-md bg-[#F4F8F8] text-right md:mx-[65px] md:h-[300px] lg:h-[490px]">
+                <div className="mx-[40px] h-[460px] md:flex lg:block rounded-md  bg-[#F4F8F8] text-right md:mx-[65px] md:h-[300px] lg:h-[490px]">
                   <div className="flex justify-center">
                     <Image
                       src={card.image}
                       alt="people are working in pic"
                       width={400}
                       height={400}
-                      className="mt-[10px] rounded-lg bg-cover md:mr-4 md:w-[500px] lg:w-[400px]"
+                      className="2xl:mt-4 rounded-lg  bg-cover md:mr-4 lg:mr-0 md:w-[500px] lg:w-[400px]"
                     />
                   </div>
                   <div className="mr-[10px]">

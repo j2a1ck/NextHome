@@ -1,5 +1,6 @@
-"use client"
+"use client";
 import Image from "next/image";
+import Link from "next/link";
 import woman from "../../public/images/woman-desktop.webp";
 import DropDown from "./DropDown";
 import SearchBar from "./SearchBar";
@@ -7,7 +8,7 @@ import MobileNavbar from "./MobileNavbar";
 const Navbar = () => {
   return (
     <header>
-      <MobileNavbar/>
+      <MobileNavbar />
 
       {/** desktop view */}
       <div
@@ -16,21 +17,24 @@ const Navbar = () => {
       >
         <div className="hidden justify-between lg:flex">
           <div className="ml-[50px] flex flex-row items-center space-x-7">
-            <button>
-              <Image src={"/images/user.svg"} alt="user icon" width={31} height={31} />
-            </button>
-            <SearchBar/>
+            <Link href={"/"}>
+              <Image
+                src={"/images/user.svg"}
+                alt="user icon"
+                width={31}
+                height={31}
+              />
+            </Link>
+            <SearchBar />
           </div>
-          <nav className="mr-[35px] flex space-x-4">
+          <nav className="mr-[35px] flex items-center space-x-4">
             <div className="mr-[20px] flex space-x-5 font-semibold text-[#4C4C4C]">
-              <button>درباره ما</button>
-              <div
-                className="flex cursor-pointer items-center"
-              >
+              <Link href={"/about"}>درباره ما</Link>
+              <div className="flex cursor-pointer items-center">
                 <DropDown>خدمات</DropDown>
               </div>
-              <button>مهاجرت</button>
-              <button>خانه</button>
+              <Link href={"/immigration"}>مهاجرت</Link>
+              <Link href={"/"}>خانه</Link>
             </div>
             <Image
               src={"/images/airplane.png"}
@@ -40,7 +44,7 @@ const Navbar = () => {
             />
           </nav>
         </div>
-        <p className="mr-[200px] mt-[100px] flex justify-end text-2xl font-bold">
+        <p className="mr-[100px] 2xl:mr-[180px] mt-[130px] flex justify-end text-2xl font-bold 2xl:mt-[60px]">
           شما را هموار کنیم
           <span className="mx-1 text-[#04A2B9]"> مهاجرت </span>
           ما اینجا هستیم تا مسیر
