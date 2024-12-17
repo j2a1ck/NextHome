@@ -3,6 +3,7 @@ import MobileNavbar from "@/components/MobileNavbar";
 import Image from "next/image";
 import text from "../../../../public/data/text.json";
 import Footer from "@/components/Footer";
+import PageLayout from "../../../components/PageLayout";
 
 interface Card {
   id: number;
@@ -14,13 +15,13 @@ interface Card {
   buttons: string[];
 }
 
-interface Props {
+interface BlogProps {
   params: Promise<{
     slug: string;
   }>;
 }
 
-export default async function Blog(props: Props) {
+export default async function Blog(props: BlogProps) {
   const params = await props.params;
   const currentCard = text.cards.find(
     (card: Card) => card.name === params.slug
@@ -32,28 +33,8 @@ export default async function Blog(props: Props) {
 
   return (
     <article>
-      <header>
-        <nav className="hidden lg:block ">
-          <DesktopNavbar />
-        </nav>
-        <nav>
-          <MobileNavbar />
-        </nav>
-      </header>
-      <main className=" lg:mt-[70px] lg:w-[1000px] lg:mx-auto">
-        <Image
-          className="mx-auto mb-5 rounded-3xl lg:w-[900px] md:w-[500px]"
-          src={currentCard.image}
-          width={350}
-          height={350}
-          alt="Work related illustration"
-          priority
-        />
-        <h1 className="m-10 text-right text-4xl font-bold">
-          {currentCard.title}
-        </h1>
-        <div className="mr-1 space-y-6 text-right leading-7">
-          <p className="">
+      <PageLayout title={currentCard.title} image={currentCard.image}>
+          <p>
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
             استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
             ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
@@ -137,9 +118,7 @@ export default async function Blog(props: Props) {
             رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات
             پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
           </p>
-        </div>
-        <Footer/>
-      </main>
+      </PageLayout>
     </article>
   );
 }
