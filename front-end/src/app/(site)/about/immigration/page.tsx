@@ -1,4 +1,4 @@
-import Layout from "../../components/PageLayout";
+import Layout from "../../../../components/PageLayout";
 const page = () => {
   return (
     <Layout title="مهاجرت">
