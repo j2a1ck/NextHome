@@ -1,7 +1,7 @@
 import Layout from "../../components/PageLayout";
 const page = () => {
   return (
-    <Layout title="درباره ما">
+    <Layout title="مهاجرت">
       <p>
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
         از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
