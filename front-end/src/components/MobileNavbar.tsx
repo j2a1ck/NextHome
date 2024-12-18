@@ -1,15 +1,14 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import DropDown from "./DropDown";
 import { IoMdClose } from "react-icons/io";
 
-
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="m-[17px] flex flex-row items-center justify-between md:flex lg:hidden">
+    <header className="m-[17px] flex flex-row items-center justify-between md:flex lg:hidden">
       <Link href={"/login"}>
         <Image
           src={"/images/user.svg"}
@@ -35,7 +34,7 @@ const MobileNavbar = () => {
         />
       </button>
       {isOpen && (
-        <div className="absolute right-5 top-20 z-10 flex h-80 w-60 flex-col items-center justify-center rounded-lg bg-[#F4F8F8]">
+        <nav className="absolute right-5 top-20 z-10 flex h-80 w-60 flex-col items-center justify-center rounded-lg bg-[#F4F8F8]">
           <button onClick={() => setIsOpen(!isOpen)}>
             <IoMdClose />
           </button>
@@ -51,10 +50,10 @@ const MobileNavbar = () => {
 
           <Link href={"/about"}>درباره ما</Link>
           <span className="my-4 w-20 border-b-2 border-black"></span>
-        </div>
+        </nav>
       )}
-    </nav>
+    </header>
   );
-}
+};
 
-export default MobileNavbar
+export default MobileNavbar;

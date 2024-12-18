@@ -1,12 +1,12 @@
 interface CardButtonProps {
-    children: React.ReactNode
+  children: React.ReactNode;
 }
 const CardButton = ({ children }: CardButtonProps) => {
   return (
-    <button className="h-[22px] w-[100px] mt-[4px] rounded-lg font-light text-sm items-center bg-[#88D3FB]">
+    <button className="mt-[4px] h-[22px] w-[100px] items-center rounded-lg bg-[#88D3FB] text-sm font-light">
       {children}
     </button>
   );
 };
 
-export default CardButton
+export default CardButton;

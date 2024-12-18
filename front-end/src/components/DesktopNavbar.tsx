@@ -7,7 +7,7 @@ import DropDown from "./DropDown";
 const DesktopNavbar = () => {
   return (
     <div className="hidden h-[40px] bg-cover bg-bottom pt-[8px] lg:block">
-      <div className="hidden justify-between lg:flex">
+      <header className="hidden justify-between lg:flex">
         <div className="ml-[50px] flex flex-row items-center space-x-7">
           <Link href={"/login"}>
             <Image
@@ -35,7 +35,7 @@ const DesktopNavbar = () => {
             />
           </div>
         </nav>
-      </div>
+      </header>
     </div>
   );
 };

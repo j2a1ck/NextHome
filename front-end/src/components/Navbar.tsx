@@ -17,7 +17,7 @@ const Navbar = () => {
       >
         <div className="hidden justify-between lg:flex">
           <div className="ml-[50px] flex flex-row items-center space-x-7">
-            <Link href={"/"}>
+            <Link href={"/login"}>
               <Image
                 src={"/images/user.svg"}
                 alt="user icon"
@@ -44,7 +44,7 @@ const Navbar = () => {
             />
           </nav>
         </div>
-        <p className="mr-[100px] 2xl:mr-[180px] mt-[130px] flex justify-end text-2xl font-bold 2xl:mt-[60px]">
+        <p className="mr-[100px] mt-[130px] flex justify-end text-2xl font-bold 2xl:mr-[180px] 2xl:mt-[60px]">
           شما را هموار کنیم
           <span className="mx-1 text-[#04A2B9]"> مهاجرت </span>
           ما اینجا هستیم تا مسیر

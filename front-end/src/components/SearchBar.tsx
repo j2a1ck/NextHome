@@ -21,24 +21,24 @@ const SearchBar = () => {
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
   // Close the dropdown when clicking outside
- useEffect(() => {
-  const handleClickOutside = (event: MouseEvent) => {
-    const path = event.composedPath();
-    if (
-      inputRef.current &&
-      resultsRef.current &&
-      !path.includes(inputRef.current) &&
-      !path.includes(resultsRef.current)
-    ) {
-      setIsOpen(false);
-    }
-  };
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const path = event.composedPath();
+      if (
+        inputRef.current &&
+        resultsRef.current &&
+        !path.includes(inputRef.current) &&
+        !path.includes(resultsRef.current)
+      ) {
+        setIsOpen(false);
+      }
+    };
 
-  document.addEventListener("mousedown", handleClickOutside);
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, []);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="relative">
