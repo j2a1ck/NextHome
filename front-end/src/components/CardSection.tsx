@@ -18,7 +18,8 @@ const CardSection = () => {
   useEffect(() => {
     fetch("/data/text.json")
       .then((response) => response.json())
-      .then((json) => setCards(json.cards));
+      .then((json) => setCards(json.cards))
+      .catch((error) => console.error("Error fetching card data:", error));
   }, []);
   return (
     <section>
@@ -37,7 +38,7 @@ const CardSection = () => {
                       alt="people are working in pic"
                       width={400}
                       height={400}
-                      className="rounded-lg bg-cover md:mr-4 md:w-[500px] lg:mr-0 lg:w-[400px] 2xl:mt-4"
+                      className="h-auto w-auto rounded-lg bg-cover md:mr-4 md:w-[500px] lg:mr-0 lg:w-[400px] 2xl:mt-4"
                     />
                   </div>
                   <div className="mr-[10px]">

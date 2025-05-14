@@ -8,9 +8,9 @@ const HeroSection = () => {
         style={{ backgroundImage: `url(${road.src})` }}
       >
         <p className="relative top-20 flex flex-col text-center text-5xl leading-normal md:top-32 md:text-8xl md:leading-relaxed">
-          <b>روش مناسب</b>
-          <b>رو خودت</b>
-          <b>!انتخاب کن</b>
+          <span>روش مناسب</span>
+          <span>رو خودت</span>
+          <span>!انتخاب کن</span>
         </p>
       </div>
     </section>
